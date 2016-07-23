@@ -387,6 +387,8 @@ int main(int argc, char *argv[])
 		sdl_blit(0, 0, XRES, YRES, vid_buf, XRES*4);
 	}
 
+	free(vidbuf);
+
 	f = fopen("font.bin", "wb");
 	fwrite(width, 1, 256, f);
 #ifdef EXTENDED_FONT
