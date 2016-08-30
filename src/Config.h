@@ -16,11 +16,11 @@
 #endif
 
 #ifndef MINOR_VERSION
-#define MINOR_VERSION 4
+#define MINOR_VERSION 5
 #endif
 
 #ifndef BUILD_NUM
-#define BUILD_NUM 329
+#define BUILD_NUM 330
 #endif
 
 #ifndef SNAPSHOT_ID
@@ -32,6 +32,11 @@
 // See jacob1 to get a mod ID
 #ifndef MOD_ID
 #define MOD_ID 0
+#endif
+
+#ifdef SNAPSHOT
+#define FUTURE_SAVE_VERSION 92
+#define FUTURE_MINOR_VERSION 0
 #endif
 //VersionInfoEnd
 
