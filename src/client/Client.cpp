@@ -1,12 +1,12 @@
-#include <stdlib.h>
+#include <cstdlib>
 #include <iostream>
 #include <sstream>
 #include <string>
 #include <vector>
 #include <map>
 #include <iomanip>
-#include <time.h>
-#include <stdio.h>
+#include <ctime>
+#include <cstdio>
 #include <deque>
 #include <fstream>
 #include <dirent.h>
@@ -824,7 +824,7 @@ bool Client::CheckUpdate(void *updateRequest, bool checkSession)
 						}
 					}
 
-#ifdef SNAPSHOT
+#if defined(SNAPSHOT) || MOD_ID > 0
 					Json::Value snapshotVersion = versions["Snapshot"];
 					int snapshotSnapshot = snapshotVersion["Snapshot"].asInt();
 					std::string snapshotFile = snapshotVersion["File"].asString();
